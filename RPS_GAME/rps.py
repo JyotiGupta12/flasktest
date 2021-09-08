@@ -16,5 +16,5 @@ def rpsGame():
 
 if __name__ == '__main__':
     # sess.init_app(app)
-    app.run(debug=True)
+    app.run(debug=True, port=90,host = "0.0.0.0")
     # to run on cmd
