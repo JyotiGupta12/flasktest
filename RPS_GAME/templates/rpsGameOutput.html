@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    #display{
+     width:500px;
+     height:500px;
+     background-color:white;
+     margin-left:30%;
+     text-align:center;
+     }
+    a{
+      text-decoration:none;
+      font-size:22px;}
+
+    </style>
+</head>
+<body>
+<div id = 'display'>
+    <h3>You choose: {{user_item}}</h3>
+    <img src="static\{{user_item}}.jpg">
+    <h3>Computer Choose: {{comp_value}}</h3>
+    <img src="static\{{comp_value}}.jpg">
+    {% if user_item == comp_value %}
+    <p>It is a tie</p>
+    {% elif user_item == "rock" and comp_value =="paper" %}
+    <p>Computer Win</p>
+    {% elif user_item == "rock" and comp_value =="scissor" %}
+    <p>You Win</p>
+
+    {% elif user_item == "paper" and comp_value =="scissor" %}
+    <p>Computer Win</p>
+    {% elif user_item == "paper" and comp_value =="rock" %}
+    <p>You Win</p>
+    {% elif user_item == "scissor" and comp_value =="rock" %}
+    <p>Computer Win</p>
+    {% elif user_item == "scissor" and comp_value =="paper" %}
+    <p>You Win</p>
+
+    {% endif %}
+
+    <br><a href ='/rpsGame'>Play Again</a>
+</div>
+
+</body>
+</html>
